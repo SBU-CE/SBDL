@@ -385,7 +385,14 @@ namespace SBDL {
 	* @return font which is loaded
 	*/
 	Font *loadFont(const std::string &path, int size) {
-		return TTF_OpenFont(path.c_str(), size);
+		Font *font;
+		font = TTF_OpenFont(path.c_str(), size);
+		if (!font) {
+			const std::string message = "Unable to load: " + path;
+			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "SBDL load font error", message.c_str(), nullptr);
+			exit(1);
+		}
+		return font;
 	}
 
 	/**
