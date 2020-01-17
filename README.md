@@ -7,6 +7,7 @@ Since the bare SDL library is too verbose and hard to use for first-year student
 This library is successor of `Hash<Written for ITP96Fall>` and `Genio2<Written for ITP95Fall>` with great experience which we learned from those libraries.
 
 Mohammad Sadegh Dehghan & Amin Borjian wrote this library to fulfill all the needs of a first-term student for ITP97Fall course and all upcoming ITP courses in future.
+this library also used for ITP98Fall students successfully
 
 ## Basic Usage
 1. Put `include` directories of `SDL2`,`SDL2_image`,`SDL2_ttf`,`SDL2_mixer` in your compiler's include directory.
@@ -30,14 +31,14 @@ int main(int argc, char *argv[])
 
 	while (SBDL::isRunning()) {
 		int startTime = SBDL::getTime();
-		
+
 		SBDL::updateEvents();
 		SBDL::clearRenderScreen();
 
 		//Game logic code
 
 		SBDL::updateRenderScreen();
-		
+
 		int elapsedTime = SBDL::getTime() - startTime;
 		if (elapsedTime < delay)
 			SBDL::delay(delay - elapsedTime);
@@ -46,6 +47,9 @@ int main(int argc, char *argv[])
 }
 
 ```
+## TODO
++ add a good hasintersect function to determine intersecting objects like diamonds and circles
+
 ## Contribution
 If you find any bugs,need a new feature,etc feel free to create an issue[https://github.com/MSDehghan/SBDL/issues]
 
