@@ -387,7 +387,7 @@ namespace SBDL {
 	Font *loadFont(const std::string &path, int size) {
 		Font *font;
 		font = TTF_OpenFont(path.c_str(), size);
-		if (!font) {
+		if (font == nullptr) {
 			const std::string message = "Unable to load: " + path;
 			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "SBDL load font error", message.c_str(), nullptr);
 			exit(1);
@@ -449,7 +449,7 @@ namespace SBDL {
 	Sound *loadSound(const std::string &path) {
 		Sound *sound;
 		sound = Mix_LoadWAV(path.c_str());
-		if (!sound) {
+		if (sound == nullptr) {
 			const std::string message = "Unable to load: " + path;
 			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "SBDL load sound error", message.c_str(), nullptr);
 			exit(1);
@@ -465,7 +465,7 @@ namespace SBDL {
 	Music *loadMusic(const std::string &path) {
 		Music *music;
 		music = Mix_LoadMUS(path.c_str());
-		if (!music) {
+		if (music == nullptr) {
 			const std::string message = "Unable to load: " + path;
 			SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "SBDL load music error", message.c_str(), nullptr);
 			exit(1);
