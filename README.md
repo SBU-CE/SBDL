@@ -47,9 +47,10 @@ int main(int argc, char *argv[])
 }
 
 ```
+
 ## TODO
-+ add a good hasintersect function to determine intersecting objects like diamonds and circles
-+ add a better delay handler as it as available in pygame
++ add a good hasintersect function to determine intersecting non-square objects like diamonds and circles
++ add a better delay handler as it as available in pygame https://www.pygame.org/docs/ref/time.html
 
 ## Contribution
 If you find any bugs,need a new feature,etc feel free to create an issue[https://github.com/MSDehghan/SBDL/issues]
